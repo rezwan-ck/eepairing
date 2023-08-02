@@ -1,0 +1,19 @@
+name: Dummy Build Workflow
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build:
+    runs-on: eepairing
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Dummy Build
+        id: build
+        run: |
+          echo "Hello World"
